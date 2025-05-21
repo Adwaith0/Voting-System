@@ -107,17 +107,44 @@ if (isset($_SESSION['SESS_NAME']) && $_SESSION['SESS_NAME'] != "") {
                                     <div class="invalid-feedback">Please enter your last name</div>
                                 </div>
                             </div>
-                            
+
                             <div class="mb-3">
-                                <label for="username" class="form-label">Username</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="fas fa-at"></i></span>
-                                    <input type="text" class="form-control" id="username" name="username" 
-                                           required maxlength="50" placeholder="Choose a username">
-                                </div>
-                                <div class="invalid-feedback">Please choose a username</div>
-                                <small class="text-muted">This will be your login ID</small>
-                            </div>
+    <label for="aadhar" class="form-label">Aadhar Number</label>
+    <div class="input-group">
+        <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+        <input type="text" class="form-control" id="aadhar" name="aadhar" 
+               required pattern="\d{12}" maxlength="12" placeholder="Enter 12-digit Aadhar number">
+    </div>
+    <div class="invalid-feedback">Please enter a valid 12-digit Aadhar number</div>
+</div>
+
+<div class="mb-3">
+    <label for="mobile" class="form-label">Mobile Number</label>
+    <div class="input-group">
+        <span class="input-group-text"><i class="fas fa-phone"></i></span>
+        <input type="tel" class="form-control" id="mobile" name="mobile" 
+               required pattern="\d{10}" maxlength="10" placeholder="Enter 10-digit mobile number">
+    </div>
+    <div class="invalid-feedback">Please enter a valid 10-digit mobile number</div>
+</div>
+
+                            
+<div class="mb-3">
+    <label for="otp" class="form-label">OTP</label>
+    <div class="input-group">
+        <input type="text" class="form-control" id="otp" name="otp" 
+               required placeholder="Enter OTP sent to your mobile" maxlength="6">
+        <button type="button" class="btn btn-outline-primary" id="sendOtpBtn">
+            <i class="fas fa-paper-plane me-1"></i>Send OTP
+        </button>
+    </div>
+    <div class="invalid-feedback">Please enter the OTP sent to your mobile</div>
+</div>
+
+                            
+                            
+
+
                             
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
@@ -225,6 +252,18 @@ if (isset($_SESSION['SESS_NAME']) && $_SESSION['SESS_NAME'] != "") {
             form.classList.add('was-validated');
         }, false);
     });
+
+    // Simulate OTP sending
+document.getElementById('sendOtpBtn').addEventListener('click', function() {
+    const mobile = document.getElementById('mobile').value;
+    if (/^\d{10}$/.test(mobile)) {
+        alert("OTP sent to mobile number: " + mobile);
+        // You can integrate actual OTP sending using Twilio / SMS API here
+    } else {
+        alert("Please enter a valid 10-digit mobile number before requesting OTP.");
+    }
+});
+
     </script>
 
     <!-- Bootstrap JS Bundle with Popper -->

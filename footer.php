@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
-                    <h5 class="mb-3"><i class="fas fa-vote-yea me-2"></i> SecureVote</h5>
+                    <img src="assets/newlogo.png" alt="SecureVote Logo" style="height: 70px; width: auto;">
                     <p class="mb-0">Your trusted online voting platform for fair and transparent elections.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">

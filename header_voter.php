@@ -46,7 +46,7 @@ session_start();
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex align-items-center">
-                    <i class="fas fa-vote-yea fa-lg me-2"></i>
+                    <img src="assets/newlogo.png" alt="SecureVote Logo" style="height: 70px; width: auto;">
                     <h4 class="mb-0">SecureVote</h4>
                 </div>
                 

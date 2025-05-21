@@ -12,7 +12,7 @@ include "header.php";
 <main class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-6 col-lg-5">
-            <div class="card shadow-lg animate__animated animate__fadeIn">
+            <div class="card shadow-lg animate_animated animate_fadeIn">
                 <div class="card-header bg-primary text-white">
                     <h3 class="card-title mb-0 text-center">
                         <i class="fas fa-user-lock me-2"></i>Voter Login
@@ -38,15 +38,17 @@ include "header.php";
                     
                     <!-- Login Form -->
                     <form action="login_action.php" method="post" id="myform" class="needs-validation" novalidate>
-                        <div class="mb-3">
-                            <label for="username" class="form-label">Username</label>
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                <input type="text" class="form-control" id="username" name="username" 
-                                       required maxlength="50" placeholder="Enter your username">
-                            </div>
-                            <div class="invalid-feedback">Please enter your username</div>
-                        </div>
+                        
+<div class="mb-3">
+    <label for="aadhaar" class="form-label">Aadhaar Number</label>
+    <div class="input-group">
+        <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+        <input type="text" class="form-control" id="aadhaar" name="aadhaar" 
+               required maxlength="12" pattern="\d{12}" placeholder="Enter your 12-digit Aadhaar number">
+    </div>
+    <div class="invalid-feedback">Please enter a valid 12-digit Aadhaar number</div>
+</div>
+
                         
                         <div class="mb-4">
                             <label for="password" class="form-label">Password</label>
@@ -112,4 +114,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<?php include "footer.php"; ?>
+<?php include "footer.php"; ?> 

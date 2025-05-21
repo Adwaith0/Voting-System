@@ -33,7 +33,9 @@ if(isset($_POST['submit'])) {
     // Validate and sanitize inputs
     $firstname = trim($_POST['firstname']);
     $lastname = trim($_POST['lastname']);
-    $username = trim($_POST['username']);
+    $aadhar = $_POST['aadhar'];
+    $mobile = $_POST['mobile'];
+    $otp = $_POST['otp']
     $password = $_POST['password'];
 
     // Input validation
