@@ -1274,4 +1274,5 @@ function VWZ_IsEmpty(value)
 
 
 /*
+	Copyright (C) 2003-2011 JavaScript-Coder.com . All rights reserved.
 */

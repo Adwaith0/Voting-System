@@ -55,28 +55,31 @@
 </head>
 <body>
     <!-- Modern Marquee Replacement -->
-    <div class="marquee-custom animate__animated animate__fadeInDown">
-        <div class="container text-center">
-            <i class="fas fa-vote-yea me-2"></i> Welcome to SecureVote - Your Trusted Online Voting Platform
-        </div>
+   <!-- Modern Marquee Replacement with Logo -->
+<div class="marquee-custom animate_animated animate_fadeInDown">
+    <div class="container d-flex align-items-center justify-content-center gap-3">
+        <!-- Logo Image -->
+        <img src="assets/newlogo.png" alt="SecureVote Logo" style="height: 70px; width: auto;">
+        <span>
+            
+            <strong>SecureVote</strong> - Your Trusted Online Voting Platform
+        </span>
     </div>
+</div>
 
-    <!-- Navigation -->
-    <div class="container nav-custom animate__animated animate__fadeIn">
-        <div class="row justify-content-center">
-            <div class="col-auto text-center">
-                <a href="index.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">
-                    <i class="fas fa-home me-2"></i>Home
-                </a>
-                <a href="register.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'register.php' ? 'active' : ''; ?>">
-                    <i class="fas fa-user-plus me-2"></i>Register
-                </a>
-                <a href="login.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'login.php' ? 'active' : ''; ?>">
-                    <i class="fas fa-sign-in-alt me-2"></i>Login
-                </a>
-            </div>
+<!-- Navigation Bar -->
+<div class="container nav-custom animate_animated animate_fadeIn">
+    <div class="row justify-content-center">
+        <div class="col-auto text-center">
+            <a href="index.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">
+                <i class="fas fa-home me-2"></i>Home
+            </a>
+            <a href="results.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'results.php' ? 'active' : ''; ?>">
+                <i class="fas fa-poll me-2"></i>Results
+            </a>
         </div>
     </div>
+</div>
 
     <!-- Main Content Container -->
     <div class="container">

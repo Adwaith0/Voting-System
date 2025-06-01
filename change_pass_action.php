@@ -17,21 +17,21 @@ $sql =  mysqli_query($con, 'SELECT password FROM loginusers WHERE username="'.$_
 $row = mysqli_fetch_assoc($sql);
 $pass = $row['password'];
 if ($currentpass != $pass) {
-	$error = "Incorrect Current Password!";
+	$error = "<center><h4><font color='#FF0000'>Incorrect Current Password!</h4></center></font>";
 	include ("change_pass.php");
 }
 else if ($currentpass == $pass && $newpass == $cnewpass){
 $sql1 = mysqli_query($con, 'UPDATE loginusers SET password="'. md5($_POST['npassword']).'" WHERE username="'.$_SESSION['SESS_NAME'].'" ');
-$error = "Password successfully changed!";
+$error = "<center><h4><font color='green'>Password successfully changed!</h4></center></font>";
 include ("change_pass.php");
 }
 else {
-	$error = "New Password and Confirm Password does not match!";
+	$error = "<center><h4><font color='#FF0000'>New Password and Confirm Password does not match!</h4></center></font>";
 	include ("change_pass.php");
 }
 }
 else {
-	$error = "Error!>";
+	$error = "<center><h4><font color='#FF0000'>Error!</h4></center></font>";
 	include ("change_pass.php");
 }
 ?>
