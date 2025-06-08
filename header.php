@@ -67,6 +67,7 @@
     </div>
 </div>
 
+
 <!-- Navigation Bar -->
 <div class="container nav-custom animate_animated animate_fadeIn">
     <div class="row justify-content-center">
@@ -77,9 +78,13 @@
             <a href="results.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'results.php' ? 'active' : ''; ?>">
                 <i class="fas fa-poll me-2"></i>Results
             </a>
+             <a href="admin_login.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'admin_login.php' ? 'active' : ''; ?>">
+                <i class="fas fa-lock me-2"></i>Admin Login
+            </a>
         </div>
     </div>
 </div>
+
 
     <!-- Main Content Container -->
     <div class="container">

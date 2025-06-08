@@ -25,8 +25,9 @@ if (isset($_SESSION['SESS_NAME'])!="") {
                     
                     <form action="login_action.php" method="post" id="myform">
                         <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" name="username" id="username" placeholder="Enter your username">
+                            <label for="username">Username/Aadhar</label>
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Enter your username/Aadhar number" maxlength="50">
+                            <small class="form-text text-muted">You can use your username or Aadhar number</small>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>

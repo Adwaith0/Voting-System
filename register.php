@@ -41,9 +41,20 @@ if (isset($_SESSION['SESS_NAME'])!="") {
                         </div>
                         
                         <div class="form-group">
+                            <label for="aadhar">Aadhar Card Number</label>
+                            <input type="text" class="form-control" name="aadhar" id="aadhar" placeholder="Enter 12-digit Aadhar number" maxlength="12">
+                            <small class="form-text text-muted">12-digit Aadhar number without spaces or hyphens</small>
+                        </div>
+                        
+                        <div class="form-group">
                             <label for="password">Password</label>
                             <input type="password" class="form-control" name="password" id="password" placeholder="Create a password (min 6 characters)">
                             <small class="form-text text-muted">Password must be at least 6 characters long</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm_password">Confirm Password</label>
+                            <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Re-enter your password">
                         </div>
                         
                         <div class="form-group text-center">
@@ -72,8 +83,18 @@ frmvalidator.addValidation("lastname","req","Please enter your lastname");
 frmvalidator.addValidation("lastname","maxlen=50");
 frmvalidator.addValidation("username","req","Please enter a username"); 
 frmvalidator.addValidation("username","maxlen=50");
+frmvalidator.addValidation("aadhar","req","Please enter your Aadhar number"); 
+frmvalidator.addValidation("aadhar","numeric","Aadhar number must contain only digits");
+frmvalidator.addValidation("aadhar","exactlength=12","Aadhar number must be exactly 12 digits");
 frmvalidator.addValidation("password","req","Please enter a password"); 
 frmvalidator.addValidation("password","minlen=6","Password must not be less than 6 characters.");
+frmvalidator.addValidation("confirm_password","req","Please confirm your password");
+frmvalidator.addValidation("confirm_password","eqelm=password","The confirmed password does not match");
+
+// Additional JavaScript for real-time validation
+document.getElementById('aadhar').addEventListener('input', function(e) {
+    this.value = this.value.replace(/[^0-9]/g, '');
+});
 </script>
 
 <style>

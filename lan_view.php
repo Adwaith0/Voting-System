@@ -50,7 +50,7 @@ include "header_voter.php";  // Include your voter header
                     </div>
                     <div class="card-body">
                         <?php
-                        $query = "SELECT fullname, votecount FROM languages ORDER BY votecount DESC";
+                        $query = "SELECT fullname, votecount FROM candidates ORDER BY votecount DESC";
                         $result = mysqli_query($con, $query);
                         
                         if (mysqli_num_rows($result) > 0) {
